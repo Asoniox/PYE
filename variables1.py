@@ -1,4 +1,4 @@
-"""Showcase of how a variable works, how it can change, and calculating variables together"""
+"""Showcase of how a variable works, how it can change and calculating variables together"""
 
 x=45 #Initial value
 x=45.5 #Value changes from 45 to 45.5
