@@ -9,4 +9,4 @@ a = float(input("Square Height: "))
 b = float(input("Square Width: "))
 
 area = sqrarea.sqrarea(a, b)
-print "Square Area:", area
+print("Square Area:", area)
