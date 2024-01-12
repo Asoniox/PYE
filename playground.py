@@ -1,12 +1,6 @@
-"""
-Playground
--------------
-Testing playground for PYEs and related modules
-"""
-import sqrarea
+from bubblesort import Order, bubbleSort
 
-a = float(input("Square Height: "))
-b = float(input("Square Width: "))
-
-area = sqrarea.sqrarea(a, b)
-print("Square Area:", area)
+test_list = [1, 5, 9, -2, 4, 10, -5, -12]
+print(test_list)
+bubbleSort(test_list, Order.ascending)
+print(test_list)
