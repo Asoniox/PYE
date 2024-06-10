@@ -1,4 +1,4 @@
-class Order():
+class Order:
     def lt(a, b):
         """
         Same as a < b.
@@ -15,6 +15,7 @@ class Order():
 
     ascending = lt
     descending = gt
+
 
 def bubbleSort(_list: list, order: Order):
     """
@@ -34,8 +35,8 @@ def bubbleSort(_list: list, order: Order):
         The same list but sorted. Overwrites the unsorted list completely.
     """
     n = len(_list)
-    for i in range(n): # 0-N, step 1
-        for j in range(n-1, i, -1):
-            if order(_list[j], _list[j-1]):
-                _list[j], _list[j-1] = _list[j-1], _list[j]
+    for i in range(n):  # 0-N, step 1
+        for j in range(n - 1, i, -1):
+            if order(_list[j], _list[j - 1]):
+                _list[j], _list[j - 1] = _list[j - 1], _list[j]
     return _list
