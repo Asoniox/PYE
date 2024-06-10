@@ -1,14 +1,29 @@
+"""bubblesort.py
+---
+Simple and straightforward bubble sort module, with convenience features.
+
+Example Usage:
+    ```python
+    import bubblesort
+    from bubblesort import Order
+
+    array = [1, 6, 3, 2, 7, 8, 3, 1]
+    bubbleSort(array, Order.ascending)
+    ```
+"""
+
+
 class Order:
     def lt(a, b):
-        """
-        Same as a < b.
+        """Same as a < b.
+
         Kindly borrowed from the `operator` module.
         """
         return a < b
 
     def gt(a, b):
-        """
-        Same as a > b.
+        """Same as a > b.
+
         Kindly borrowed from the `operator` module.
         """
         return a > b
@@ -17,13 +32,12 @@ class Order:
     descending = gt
 
 
-def bubbleSort(_list: list, order: Order):
-    """
-    Sort a list with the Bubble Sort algorithm.
+def bubbleSort(array: list, order: Order):
+    """Sort a list with the Bubble Sort algorithm.
 
     Parameters
     ----------
-    _list: `list`
+    array: `list`
         List to be sorted.
 
     order: `bubblesort.Order`
@@ -31,12 +45,12 @@ def bubbleSort(_list: list, order: Order):
 
     Returns
     -------
-    sorted_list: `list`
+    sortedarray: `list`
         The same list but sorted. Overwrites the unsorted list completely.
     """
-    n = len(_list)
+    n = len(array)
     for i in range(n):  # 0-N, step 1
         for j in range(n - 1, i, -1):
-            if order(_list[j], _list[j - 1]):
-                _list[j], _list[j - 1] = _list[j - 1], _list[j]
-    return _list
+            if order(array[j], array[j - 1]):
+                array[j], array[j - 1] = array[j - 1], array[j]
+    return array
